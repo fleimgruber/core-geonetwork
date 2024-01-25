@@ -16,8 +16,11 @@ import org.junit.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.ConfigurableApplicationContext;
 
+import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
+import java.util.HashMap;
+import java.util.Map;
 
 public class SampleDataParserTest extends AbstractCoreIntegrationTest {
     @Autowired
@@ -62,4 +65,56 @@ public class SampleDataParserTest extends AbstractCoreIntegrationTest {
         String schemaDetected = dataManager.autodetectSchema(sampleData);
         dataManager.validate(schemaDetected, sampleData);
     }
+
+    public static final String SCHEMA_INDEX_XSLT_FOLDER = "index-fields";
+    public static final String SCHEMA_INDEX_XSTL_FILENAME = "index.xsl";
+    public static final String SCHEMA_INDEX_SUBTEMPLATE_XSTL_FILENAME = "index-subtemplate.xsl";
+
+    private Path getXSLTForIndexing(Path schemaDir, MetadataType metadataType) {
+        Path xsltForIndexing = schemaDir
+            .resolve(SCHEMA_INDEX_XSLT_FOLDER)
+            .resolve(
+                metadataType.equals(MetadataType.SUB_TEMPLATE) || metadataType.equals(MetadataType.TEMPLATE_OF_SUB_TEMPLATE) ?
+                    SCHEMA_INDEX_SUBTEMPLATE_XSTL_FILENAME : SCHEMA_INDEX_XSTL_FILENAME);
+        if (!Files.exists(xsltForIndexing)) {
+            throw new RuntimeException(String.format(
+                "XSLT for schema indexing does not exist. Create file '%s'.",
+                xsltForIndexing.toString()));
+        }
+        return xsltForIndexing;
+    }
+
+	@Test
+	public void testXmlTransform() throws Exception {
+		Path samplePath = Paths.get("src", "test", "resources", "iso19115-3_sample.xml");
+        Element sampleData = Xml.loadFile(samplePath);
+
+        MetadataType metadataType = MetadataType.METADATA;
+        final Path schemaDir = _schemaManager.getSchemaDir("iso19115-3.2018");
+        final Path styleSheet = getXSLTForIndexing(schemaDir, metadataType);
+
+		IndexingMode indexingMode = IndexingMode.full;
+		Map<String, Object> indexParams = new HashMap<>();
+		indexParams.put("fastIndexMode", indexingMode.equals(IndexingMode.core));
+
+		Element fields = Xml.transform(sampleData, styleSheet, indexParams);
+        fields.getAttributeValue("a");
+	}
+
+	@Test
+	public void testXmlTransform_full() throws Exception {
+		Path samplePath = Paths.get("src", "test", "resources", "iso19115-3_sample_full.xml");
+        Element sampleData = Xml.loadFile(samplePath);
+
+        MetadataType metadataType = MetadataType.METADATA;
+        final Path schemaDir = _schemaManager.getSchemaDir("iso19115-3.2018");
+        final Path styleSheet = getXSLTForIndexing(schemaDir, metadataType);
+
+		IndexingMode indexingMode = IndexingMode.full;
+		Map<String, Object> indexParams = new HashMap<>();
+		indexParams.put("fastIndexMode", indexingMode.equals(IndexingMode.core));
+
+		Element fields = Xml.transform(sampleData, styleSheet, indexParams);
+        fields.getAttributeValue("a");
+	}
 }
