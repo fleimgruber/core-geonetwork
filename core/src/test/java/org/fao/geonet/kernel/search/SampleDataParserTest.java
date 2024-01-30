@@ -103,7 +103,7 @@ public class SampleDataParserTest extends AbstractCoreIntegrationTest {
 
 	@Test
 	public void testXmlTransform_full() throws Exception {
-		Path samplePath = Paths.get("src", "test", "resources", "iso19115-3_sample_full.xml");
+		Path samplePath = Paths.get("src", "test", "resources", "iso19115-3_mre.xml");
         Element sampleData = Xml.loadFile(samplePath);
 
         MetadataType metadataType = MetadataType.METADATA;
