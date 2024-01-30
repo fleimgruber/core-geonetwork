@@ -57,7 +57,7 @@ public class SampleDataParserTest extends AbstractCoreIntegrationTest {
 
     @Test
     public void sampleValidate() throws Exception {
-        Path samplePath = Paths.get("src", "test", "resources", "iso19115-3_sample.xml");
+        Path samplePath = Paths.get("src", "test", "resources", "debug.xml");
         Element sampleData = Xml.loadFile(samplePath);
 
         final DataManager dataManager = _applicationContext.getBean(DataManager.class);
@@ -103,6 +103,23 @@ public class SampleDataParserTest extends AbstractCoreIntegrationTest {
 
 	@Test
 	public void testXmlTransform_full() throws Exception {
+		Path samplePath = Paths.get("src", "test", "resources", "iso19115-3_mre.xml");
+        Element sampleData = Xml.loadFile(samplePath);
+
+        MetadataType metadataType = MetadataType.METADATA;
+        final Path schemaDir = _schemaManager.getSchemaDir("iso19115-3.2018");
+        final Path styleSheet = getXSLTForIndexing(schemaDir, metadataType);
+
+		IndexingMode indexingMode = IndexingMode.full;
+		Map<String, Object> indexParams = new HashMap<>();
+		indexParams.put("fastIndexMode", indexingMode.equals(IndexingMode.core));
+
+		Element fields = Xml.transform(sampleData, styleSheet, indexParams);
+        fields.getAttributeValue("a");
+	}
+
+	@Test
+	public void testXmlTransform_debug() throws Exception {
 		Path samplePath = Paths.get("src", "test", "resources", "iso19115-3_mre.xml");
         Element sampleData = Xml.loadFile(samplePath);
 

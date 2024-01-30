@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Metadata2>
+  <ns0:metadataIdentifier xmlns:ns0="http://standards.iso.org/iso/19115/-3/mdb/2.0" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple">
+    <ns2:MD_Identifier xmlns:ns2="http://standards.iso.org/iso/19115/-3/mcc/1.0">
+      <ns2:code>
+        <ns3:CharacterString xmlns:ns3="http://standards.iso.org/iso/19115/-3/gco/1.0">e6f81a53-75fa-485e-9e29-2282221b0e3d</ns3:CharacterString>
+      </ns2:code>
+    </ns2:MD_Identifier>
+  </ns0:metadataIdentifier>
+  <ns0:defaultLocale xmlns:ns0="http://standards.iso.org/iso/19115/-3/mdb/2.0" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple">
+    <ns2:PT_Locale xmlns:ns2="http://standards.iso.org/iso/19115/-3/lan/1.0">
+      <ns2:language>
+        <ns2:LanguageCode codeList="http://www.loc.gov/standards/iso639-2/" codeListValue="eng"/>
+      </ns2:language>
+      <ns2:characterEncoding>
+        <ns2:MD_CharacterSetCode codeList="http://standards.iso.org/iso/19115/resources/Codelists/cat/codelists.xml#MD_CharacterSetCode" codeListValue="utf8"/>
+      </ns2:characterEncoding>
+    </ns2:PT_Locale>
+  </ns0:defaultLocale>
+  <ns0:contact xmlns:ns0="http://standards.iso.org/iso/19115/-3/mdb/2.0" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple">
+    <ns2:CI_Responsibility xmlns:ns2="http://standards.iso.org/iso/19115/-3/cit/2.0">
+      <ns2:role>
+        <ns2:CI_RoleCode codeList="codeListLocation#CI_RoleCode" codeListValue="pointOfContact">pointOfContact</ns2:CI_RoleCode>
+      </ns2:role>
+      <ns2:party xlink:type="simple">
+        <ns2:CI_Organisation>
+          <ns2:name>
+            <ns3:CharacterString xmlns:ns3="http://standards.iso.org/iso/19115/-3/gco/1.0">AIT</ns3:CharacterString>
+          </ns2:name>
+        </ns2:CI_Organisation>
+      </ns2:party>
+    </ns2:CI_Responsibility>
+  </ns0:contact>
+  <ns0:dateInfo xmlns:ns0="http://standards.iso.org/iso/19115/-3/mdb/2.0" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple">
+    <ns2:CI_Date xmlns:ns2="http://standards.iso.org/iso/19115/-3/cit/2.0">
+      <ns2:date>
+        <ns3:DateTime xmlns:ns3="http://standards.iso.org/iso/19115/-3/gco/1.0">2014-04-03T16:00:00</ns3:DateTime>
+      </ns2:date>
+      <ns2:dateType>
+        <ns2:CI_DateTypeCode codeList="codeListLocation#CI_DateTypeCode" codeListValue="creation">creation</ns2:CI_DateTypeCode>
+      </ns2:dateType>
+    </ns2:CI_Date>
+  </ns0:dateInfo>
+  <ns0:identificationInfo xmlns:ns0="http://standards.iso.org/iso/19115/-3/mdb/2.0" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple">
+    <ns2:MD_DataIdentification xmlns:ns2="http://standards.iso.org/iso/19115/-3/mri/1.0">
+      <ns2:citation xlink:type="simple">
+        <ns3:CI_Citation xmlns:ns3="http://standards.iso.org/iso/19115/-3/cit/2.0">
+          <ns3:title>
+            <ns4:CharacterString xmlns:ns4="http://standards.iso.org/iso/19115/-3/gco/1.0">Sample dataset</ns4:CharacterString>
+          </ns3:title>
+          <ns3:date xlink:type="simple">
+            <ns3:CI_Date>
+              <ns3:date>
+                <ns4:Date xmlns:ns4="http://standards.iso.org/iso/19115/-3/gco/1.0">2022-08-29</ns4:Date>
+              </ns3:date>
+              <ns3:dateType>
+                <ns3:CI_DateTypeCode codeList="codeListLocation#CI_DateTypeCode" codeListValue="lastUpdate">lastUpdate</ns3:CI_DateTypeCode>
+              </ns3:dateType>
+            </ns3:CI_Date>
+          </ns3:date>
+        </ns3:CI_Citation>
+      </ns2:citation>
+      <ns2:abstract>
+        <ns3:CharacterString xmlns:ns3="http://standards.iso.org/iso/19115/-3/gco/1.0">Sample dataset to illustrate how to import data + metadata</ns3:CharacterString>
+      </ns2:abstract>
+      <ns2:status>
+        <ns3:MD_ProgressCode xmlns:ns3="http://standards.iso.org/iso/19115/-3/mcc/1.0" codeList="http://standards.iso.org/iso/19115/resources/Codelists/cat/codelists.xml#MD_ProgressCode" codeListValue="underDevelopment"/>
+      </ns2:status>
+      <ns2:topicCategory>
+        <ns2:MD_TopicCategoryCode>boundaries</ns2:MD_TopicCategoryCode>
+      </ns2:topicCategory>
+      <ns2:resourceMaintenance xlink:type="simple">
+        <ns3:MD_MaintenanceInformation xmlns:ns3="http://standards.iso.org/iso/19115/-3/mmi/1.0">
+          <ns3:maintenanceAndUpdateFrequency>
+            <ns3:MD_MaintenanceFrequencyCode codeList="http://standards.iso.org/iso/19115/resources/Codelists/cat/codelists.xml#MD_MaintenanceFrequencyCode" codeListValue="asNeeded"/>
+          </ns3:maintenanceAndUpdateFrequency>
+          <ns3:maintenanceNote>
+            <ns4:CharacterString xmlns:ns4="http://standards.iso.org/iso/19115/-3/gco/1.0">Import script: models.py / last run: 2024-02-26 18:21 on N1EN510 by LeimgruberF</ns4:CharacterString>
+          </ns3:maintenanceNote>
+          <ns3:contact xlink:type="simple">
+            <ns4:CI_Responsibility xmlns:ns4="http://standards.iso.org/iso/19115/-3/cit/2.0">
+              <ns4:role>
+                <ns4:CI_RoleCode codeList="codeListLocation#CI_RoleCode" codeListValue="pointOfContact">pointOfContact</ns4:CI_RoleCode>
+              </ns4:role>
+              <ns4:party xlink:type="simple">
+                <ns4:CI_Organisation>
+                  <ns4:name>
+                    <ns5:CharacterString xmlns:ns5="http://standards.iso.org/iso/19115/-3/gco/1.0">AIT</ns5:CharacterString>
+                  </ns4:name>
+                  <ns4:individual xlink:type="simple">
+                    <ns4:CI_Individual>
+                      <ns4:name>
+                        <ns5:CharacterString xmlns:ns5="http://standards.iso.org/iso/19115/-3/gco/1.0">Fabian Leimgruber</ns5:CharacterString>
+                      </ns4:name>
+                      <ns4:contactInfo xlink:type="simple">
+                        <ns4:CI_Contact>
+                          <ns4:address xlink:type="simple">
+                            <ns4:CI_Address>
+                              <ns4:electronicMailAddress>
+                                <ns5:CharacterString xmlns:ns5="http://standards.iso.org/iso/19115/-3/gco/1.0">fabian.leimgruber@ait.ac.at</ns5:CharacterString>
+                              </ns4:electronicMailAddress>
+                            </ns4:CI_Address>
+                          </ns4:address>
+                        </ns4:CI_Contact>
+                      </ns4:contactInfo>
+                    </ns4:CI_Individual>
+                  </ns4:individual>
+                </ns4:CI_Organisation>
+              </ns4:party>
+            </ns4:CI_Responsibility>
+          </ns3:contact>
+        </ns3:MD_MaintenanceInformation>
+      </ns2:resourceMaintenance>
+      <ns2:graphicOverview xlink:type="simple">
+        <ns3:MD_BrowseGraphic xmlns:ns3="http://standards.iso.org/iso/19115/-3/mcc/1.0">
+          <ns3:fileName>
+            <ns4:CharacterString xmlns:ns4="http://standards.iso.org/iso/19115/-3/gco/1.0">http://energieatlas-intern.ait.ac.at/geoserver/test_boundaries/energieatlas__sample_layer/wms?service=WMS&amp;version=1.1.0&amp;request=GetMap&amp;format=image/png&amp;styles=&amp;bbox=13.141203200000001,38.6153424,19.7118048,57.92301359999999&amp;width=600&amp;height=1763&amp;srs=EPSG:4326&amp;layers=test_boundaries:energieatlas__sample_layer</ns4:CharacterString>
+          </ns3:fileName>
+        </ns3:MD_BrowseGraphic>
+      </ns2:graphicOverview>
+    </ns2:MD_DataIdentification>
+  </ns0:identificationInfo>
+  <ns0:distributionInfo xmlns:ns0="http://standards.iso.org/iso/19115/-3/mdb/2.0" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple">
+    <ns2:MD_Distribution xmlns:ns2="http://standards.iso.org/iso/19115/-3/mrd/1.0">
+      <ns2:transferOptions xlink:type="simple">
+        <ns2:MD_DigitalTransferOptions>
+          <ns2:onLine xlink:type="simple">
+            <ns3:CI_OnlineResource xmlns:ns3="http://standards.iso.org/iso/19115/-3/cit/2.0">
+              <ns3:linkage>
+                <ns4:CharacterString xmlns:ns4="http://standards.iso.org/iso/19115/-3/gco/1.0">postgresql://energieatlas.ait.ac.at/testdata</ns4:CharacterString>
+              </ns3:linkage>
+              <ns3:protocol>
+                <ns4:CharacterString xmlns:ns4="http://standards.iso.org/iso/19115/-3/gco/1.0">DB:POSTGIS</ns4:CharacterString>
+              </ns3:protocol>
+              <ns3:name>
+                <ns4:CharacterString xmlns:ns4="http://standards.iso.org/iso/19115/-3/gco/1.0">boundaries.energieatlas__sample_layer</ns4:CharacterString>
+              </ns3:name>
+              <ns3:description>
+                <ns4:CharacterString xmlns:ns4="http://standards.iso.org/iso/19115/-3/gco/1.0">Access over PostGIS</ns4:CharacterString>
+              </ns3:description>
+              <ns3:function>
+                <ns3:CI_OnLineFunctionCode codeList="http://standards.iso.org/iso/19115/resources/Codelists/cat/codelists.xml#CI_OnLineFunctionCode" codeListValue="fileAccess"/>
+              </ns3:function>
+            </ns3:CI_OnlineResource>
+          </ns2:onLine>
+        </ns2:MD_DigitalTransferOptions>
+      </ns2:transferOptions>
+      <ns2:transferOptions xlink:type="simple">
+        <ns2:MD_DigitalTransferOptions>
+          <ns2:onLine xlink:type="simple">
+            <ns3:CI_OnlineResource xmlns:ns3="http://standards.iso.org/iso/19115/-3/cit/2.0">
+              <ns3:linkage>
+                <ns4:CharacterString xmlns:ns4="http://standards.iso.org/iso/19115/-3/gco/1.0">http://energieatlas-intern.ait.ac.at/geoserver/test_boundaries/energieatlas__sample_layer/wfs?service=WFS&amp;version=1.1.0&amp;request=GetFeature&amp;outputFormat=text/csv&amp;typeName=test_boundaries:energieatlas__sample_layer</ns4:CharacterString>
+              </ns3:linkage>
+              <ns3:protocol>
+                <ns4:CharacterString xmlns:ns4="http://standards.iso.org/iso/19115/-3/gco/1.0">WWW:DOWNLOAD-1.0-http–download</ns4:CharacterString>
+              </ns3:protocol>
+              <ns3:name>
+                <ns4:CharacterString xmlns:ns4="http://standards.iso.org/iso/19115/-3/gco/1.0">test_boundaries:energieatlas__sample_layer</ns4:CharacterString>
+              </ns3:name>
+              <ns3:description>
+                <ns4:CharacterString xmlns:ns4="http://standards.iso.org/iso/19115/-3/gco/1.0">Download as CSV</ns4:CharacterString>
+              </ns3:description>
+              <ns3:function>
+                <ns3:CI_OnLineFunctionCode codeList="http://standards.iso.org/iso/19115/resources/Codelists/cat/codelists.xml#CI_OnLineFunctionCode" codeListValue="download"/>
+              </ns3:function>
+            </ns3:CI_OnlineResource>
+          </ns2:onLine>
+          <ns2:onLine xlink:type="simple">
+            <ns3:CI_OnlineResource xmlns:ns3="http://standards.iso.org/iso/19115/-3/cit/2.0">
+              <ns3:linkage>
+                <ns4:CharacterString xmlns:ns4="http://standards.iso.org/iso/19115/-3/gco/1.0">http://energieatlas-intern.ait.ac.at/geoserver/test_boundaries/energieatlas__sample_layer/wfs?service=WFS&amp;request=GetCapabilities&amp;version=1.1.0</ns4:CharacterString>
+              </ns3:linkage>
+              <ns3:protocol>
+                <ns4:CharacterString xmlns:ns4="http://standards.iso.org/iso/19115/-3/gco/1.0">OGC:WFS</ns4:CharacterString>
+              </ns3:protocol>
+              <ns3:name>
+                <ns4:CharacterString xmlns:ns4="http://standards.iso.org/iso/19115/-3/gco/1.0">test_boundaries:energieatlas__sample_layer</ns4:CharacterString>
+              </ns3:name>
+              <ns3:description>
+                <ns4:CharacterString xmlns:ns4="http://standards.iso.org/iso/19115/-3/gco/1.0">Access over WFS</ns4:CharacterString>
+              </ns3:description>
+              <ns3:function>
+                <ns3:CI_OnLineFunctionCode codeList="http://standards.iso.org/iso/19115/resources/Codelists/cat/codelists.xml#CI_OnLineFunctionCode" codeListValue="fileAccess"/>
+              </ns3:function>
+            </ns3:CI_OnlineResource>
+          </ns2:onLine>
+          <ns2:onLine xlink:type="simple">
+            <ns3:CI_OnlineResource xmlns:ns3="http://standards.iso.org/iso/19115/-3/cit/2.0">
+              <ns3:linkage>
+                <ns4:CharacterString xmlns:ns4="http://standards.iso.org/iso/19115/-3/gco/1.0">http://energieatlas-intern.ait.ac.at/geoserver/test_boundaries/energieatlas__sample_layer//wms?service=WMS&amp;request=GetCapabilities&amp;version=1.1.0</ns4:CharacterString>
+              </ns3:linkage>
+              <ns3:protocol>
+                <ns4:CharacterString xmlns:ns4="http://standards.iso.org/iso/19115/-3/gco/1.0">OGC:WMS</ns4:CharacterString>
+              </ns3:protocol>
+              <ns3:name>
+                <ns4:CharacterString xmlns:ns4="http://standards.iso.org/iso/19115/-3/gco/1.0">test_boundaries:energieatlas__sample_layer</ns4:CharacterString>
+              </ns3:name>
+              <ns3:description>
+                <ns4:CharacterString xmlns:ns4="http://standards.iso.org/iso/19115/-3/gco/1.0">Access over WMS</ns4:CharacterString>
+              </ns3:description>
+              <ns3:function>
+                <ns3:CI_OnLineFunctionCode codeList="http://standards.iso.org/iso/19115/resources/Codelists/cat/codelists.xml#CI_OnLineFunctionCode" codeListValue="fileAccess"/>
+              </ns3:function>
+            </ns3:CI_OnlineResource>
+          </ns2:onLine>
+        </ns2:MD_DigitalTransferOptions>
+      </ns2:transferOptions>
+    </ns2:MD_Distribution>
+  </ns0:distributionInfo>
+</Metadata2>
